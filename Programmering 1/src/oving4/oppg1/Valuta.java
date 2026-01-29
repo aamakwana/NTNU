@@ -9,14 +9,22 @@ public class Valuta {
     this.kurs = kurs;
   }
   public double tokroner(double beløp){
+    if(beløp < 0){
+      throw new IllegalArgumentException("Beløpet kan ikke være negativt");
+
+    }
     return beløp*kurs;
   }
-  public double fromkroner(double beløp){
-    return beløp/kurs;
+  public double fromkroner(double kroner) {
+    if (kroner < 0) {
+      throw new IllegalArgumentException("Beløpet kan ikke være negativt");
+    }
+
+      return kroner / kurs;
 
   }
-  public String getNavn() {
-    return navn;
+    public String getNavn () {
+      return navn;
+    }
   }
-}
 
