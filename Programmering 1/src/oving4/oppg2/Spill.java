@@ -20,7 +20,7 @@ public class Spill {
   public void kastTerning() {
     int kast = rand.nextInt(6) + 1; //rand.nextint(6) give 5 therefore add 1
     if (kast == 1) {
-      sumPoeng = 0;
+      sumPoeng += 0;
     } else {
       sumPoeng++;
     }
