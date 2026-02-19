@@ -14,8 +14,12 @@ public class WrapTextCommand implements TextCommand {
   public String getEnd() {
     return end;
   }
+
   @Override
   public String execute(String text) {
-    return opening+ text+end;
+    if (text == null) {
+      throw new IllegalArgumentException("Text cannot be null");
+    }
+    return opening + text + end;
   }
 }

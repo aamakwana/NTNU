@@ -14,4 +14,9 @@ class ScriptTest {
     assertEquals("<p>Hello java</p>",
         script.execute("hello world"));
   }
+  @Test
+  void testNullInput() {
+    ReplaceTextCommand cmd = new ReplaceTextCommand("target", "replacement");
+    assertThrows(IllegalArgumentException.class, () -> cmd.execute(null));
+  }
 }

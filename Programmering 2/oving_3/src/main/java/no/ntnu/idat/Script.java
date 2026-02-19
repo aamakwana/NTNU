@@ -8,11 +8,15 @@ public class Script {
     this.textCommands = textCommands;
   }
 
-  public String execute(String text){
-    for (TextCommand textCommand : textCommands) {
-      text=textCommand.execute(text);
+  public String execute(String text) {
+    if (text == null) {
+      throw new IllegalArgumentException("Text cannot be null");
+    }
+    for (TextCommand command : textCommands) {
+      text = command.execute(text);
     }
     return text;
   }
+  }
 
-}
+

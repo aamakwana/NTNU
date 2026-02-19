@@ -11,7 +11,7 @@ class CapitalizeTextCommandTest {
   }
   @Test
   void testCapitalizeWords() {
-    CapitalizeTextCommand result = new CapitalizeTextCommand();
+    CapitalizeWordsTextCommand result = new CapitalizeWordsTextCommand();
     assertEquals("Text To Be Capitalized",
         result.execute("text to be capitalized"));
   }
@@ -20,6 +20,11 @@ class CapitalizeTextCommandTest {
     CapitalizeSelectionTextCommand result = new CapitalizeSelectionTextCommand("capitalized");
     assertEquals("text to be Capitalized",
         result.execute("text to be capitalized"));
+  }
+  @Test
+  void testNullInput() {
+    ReplaceTextCommand cmd = new ReplaceTextCommand("target", "replacement");
+    assertThrows(IllegalArgumentException.class, () -> cmd.execute(null));
   }
 
 }

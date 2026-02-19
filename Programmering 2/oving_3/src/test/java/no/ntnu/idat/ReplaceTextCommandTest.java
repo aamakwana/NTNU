@@ -30,4 +30,9 @@ public class ReplaceTextCommandTest {
     ReplaceTextCommand cmd = new ReplaceTextCommand("target", "replacement");
     assertEquals("replacement", cmd.getReplacement());
   }
+  @Test
+  void testNullInput() {
+    ReplaceTextCommand cmd = new ReplaceTextCommand("target", "replacement");
+    assertThrows(IllegalArgumentException.class, () -> cmd.execute(null));
+  }
 }

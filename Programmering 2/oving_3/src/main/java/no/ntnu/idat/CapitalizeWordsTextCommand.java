@@ -7,7 +7,7 @@ public class CapitalizeWordsTextCommand extends CapitalizeTextCommand {
     StringBuilder result = new StringBuilder();
     for (int i = 0; i < words.length; i++) {
       result.append(words[i].substring(0, 1).toUpperCase() + words[i].substring(1));
-      if (i + 1 < words.length - 1) {
+      if (i  < words.length - 1) {
         result.append(" ");
       }
 
