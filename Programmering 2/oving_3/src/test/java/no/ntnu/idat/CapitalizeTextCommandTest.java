@@ -2,8 +2,7 @@ package no.ntnu.idat;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
-public class CapitalizeTextCommandTest {
+class CapitalizeTextCommandTest {
   @Test
   void testCapitalize() {
     CapitalizeTextCommand result = new CapitalizeTextCommand();
