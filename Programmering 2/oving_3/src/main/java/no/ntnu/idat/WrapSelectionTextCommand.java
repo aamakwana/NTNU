@@ -3,7 +3,7 @@ package no.ntnu.idat;
 public class WrapSelectionTextCommand extends WrapTextCommand{
   private String selection;
 
-  public WrapSelectionTextCommand(String opening, String end) {
+  public WrapSelectionTextCommand(String opening, String end,String selection) {
     super(opening, end);
     this.selection = selection;
 
